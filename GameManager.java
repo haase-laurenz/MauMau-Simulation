@@ -180,7 +180,8 @@ public class GameManager{
         if (p2.keineKartenMehr()){
             totalRounds+=roundInCurrentGame;
             System.out.println(p1.getName()+" WON!"+" - "+roundInCurrentGame+" rounds");
-            System.out.println(p1.getName()+" MVP: "+p1.getMVP().getName()+" - "+p1.getMVP().getWins()+" Wins");
+            System.out.println("MVP: "+p1.getMVP().getName()+" - "+p1.getMVP().getWins()+" Wins");
+
        
             return 2;
         }
