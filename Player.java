@@ -152,6 +152,15 @@ public class Player {
     public String getName(){
         return name;
     }
+
+    public double getHandValue(){
+        double sum=0;
+        for (Karte card : kartenAufDerHand){
+            sum+=card.getRating();
+        }
+        return sum/kartenAufDerHand.size();
+        
+    }
 }
 
 

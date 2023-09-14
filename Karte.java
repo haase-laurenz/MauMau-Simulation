@@ -62,6 +62,43 @@ public class Karte {
         nameval.put("Ass",14);
     }
 
+    private static final Map<String,Double> cardRatings = new HashMap<>();
+
+    static {
+        cardRatings.put("Karo 7",0.109343284187474);
+        cardRatings.put("Karo 8",0.167999628560662);
+        cardRatings.put("Karo 9",0.290388948595961);
+        cardRatings.put("Karo 10",0.436145699987406);
+        cardRatings.put("Karo Ober",0.616032309492923);
+        cardRatings.put("Karo Dame",0.856127615906367);
+        cardRatings.put("Karo König",1.18222570798558);
+        cardRatings.put("Karo Ass",1.65622964299699);
+        cardRatings.put("Herz 7",0.361168876654572);
+        cardRatings.put("Herz 8",0.364555710385577);
+        cardRatings.put("Herz 9",0.373796718287335);
+        cardRatings.put("Herz 10",0.460516131059573);
+        cardRatings.put("Herz Ober",0.640402740565091);
+        cardRatings.put("Herz Dame",0.880498046978532);
+        cardRatings.put("Herz König",1.20659613905775);
+        cardRatings.put("Herz Ass",1.68060007406916);
+        cardRatings.put("Pik 7",0.740185012885494);
+        cardRatings.put("Pik 8",0.7435718466165);
+        cardRatings.put("Pik 9",0.752812854518257);
+        cardRatings.put("Pik 10",0.776743524218871);
+        cardRatings.put("Pik Ober",0.820149460324351);
+        cardRatings.put("Pik Dame",0.979945865774481);
+        cardRatings.put("Pik König",1.30604395785369);
+        cardRatings.put("Pik Ass",1.78004789286511);
+        cardRatings.put("Kreuz 7",1.45171968316331);
+        cardRatings.put("Kreuz 8",1.45510651689431);
+        cardRatings.put("Kreuz 9",1.46434752479607);
+        cardRatings.put("Kreuz 10",1.48827819449668);
+        cardRatings.put("Kreuz Ober",1.53168413060217);
+        cardRatings.put("Kreuz Dame",1.61177902610634);
+        cardRatings.put("Kreuz König",1.74103212274443);
+        cardRatings.put("Kreuz Ass",2.07392511136898);
+    }
+
     private String kartenName;
     private int wins;
 
@@ -108,6 +145,10 @@ public class Karte {
             }
         }
         
+    }
+
+    public double getRating(){
+        return cardRatings.get(kartenName);
     }
 
     public static List<Karte> getGemischtenKartensatz(){

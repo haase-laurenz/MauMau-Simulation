@@ -151,7 +151,7 @@ public class GameManager{
 
             for (Player player : Mitspieler){
                 System.out.println(player.getName()+": "+player.getCardCount());
-                System.out.println(player.getHand());
+                System.out.println(player.getHand()+" - Value: "+player.getHandValue());
             }
             
             
